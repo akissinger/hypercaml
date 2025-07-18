@@ -28,9 +28,9 @@ let h = h |> Graph.set_inputs [v1; v2] |> Graph.set_outputs [v5];;
 
 let matches = Match.match_graph g h;;
 
-match Match.next_match matches with
-| None -> Printf.printf "No matches found.\n"
-| Some (m, matches1) -> Printf.printf "Found a match: %s\n" (Match.string_of_match m);;
+let () = match Match.next_match matches with
+  | None -> Printf.printf "No matches found.\n"
+  | Some (m, matches1) -> Printf.printf "Found a match: %s\n" (Match.string_of_match m);;
 ```
 
 For more examples, see [test_match.ml](test/test_match.ml).
