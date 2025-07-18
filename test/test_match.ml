@@ -1,5 +1,5 @@
-module Graph = Hypergraph.Graph
-module Match = Hypergraph.Match
+module Graph = Hypercaml.Graph
+module Match = Hypercaml.Match
 
 (* Helper functions for constructing test graphs *)
 
@@ -65,10 +65,10 @@ let make_star_graph center_value leaf_values =
 (* Create a hypergraph with a proper multi-edge *)
 let make_hgraph () =
   let g = Graph.make () in
-  let (g, v1) = g |> Graph.add_vertex ~value:"" in
-  let (g, v2) = g |> Graph.add_vertex ~value:"" in
-  let (g, v3) = g |> Graph.add_vertex ~value:"" in
-  let (g, v4) = g |> Graph.add_vertex ~value:"" in
+  let (g, v1) = g |> Graph.add_vertex in
+  let (g, v2) = g |> Graph.add_vertex in
+  let (g, v3) = g |> Graph.add_vertex in
+  let (g, v4) = g |> Graph.add_vertex in
   let (g, _) = g |> Graph.add_edge ~value:"f" [v1; v2] [v3] in
   let (g, _) = g |> Graph.add_edge ~value:"g" [v3] [v4] in
   let g = g |> Graph.set_inputs [v1; v2] |> Graph.set_outputs [v4] in
@@ -77,11 +77,11 @@ let make_hgraph () =
 (* Create a larger hypergraph with a proper multi-edge *)
 let make_hgraph2 () =
   let g = Graph.make () in
-  let (g, v1) = g |> Graph.add_vertex ~value:"" in
-  let (g, v2) = g |> Graph.add_vertex ~value:"" in
-  let (g, v3) = g |> Graph.add_vertex ~value:"" in
-  let (g, v4) = g |> Graph.add_vertex ~value:"" in
-  let (g, v5) = g |> Graph.add_vertex ~value:"" in
+  let (g, v1) = g |> Graph.add_vertex in
+  let (g, v2) = g |> Graph.add_vertex in
+  let (g, v3) = g |> Graph.add_vertex in
+  let (g, v4) = g |> Graph.add_vertex in
+  let (g, v5) = g |> Graph.add_vertex in
   let (g, _) = g |> Graph.add_edge ~value:"f" [v1; v2] [v3] in
   let (g, _) = g |> Graph.add_edge ~value:"g" [v3] [v4] in
   let (g, _) = g |> Graph.add_edge ~value:"g" [v4] [v5] in

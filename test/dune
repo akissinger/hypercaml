@@ -1,7 +1,7 @@
 (test
  (name test_graph)
- (libraries hypergraph alcotest))
+ (libraries hypercaml alcotest))
 
 (test
  (name test_match)
- (libraries hypergraph alcotest))
+ (libraries hypercaml alcotest))

@@ -1,4 +1,4 @@
-module Graph = Hypergraph.Graph
+module Graph = Hypercaml.Graph
 
 let test_make_graph () =
   let g = Graph.make () in

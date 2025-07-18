@@ -1,5 +1,5 @@
 (lang dune 3.0)
 
 (package
- (name hypergraph)
+ (name hypercaml)
  (depends ocaml dune alcotest))
