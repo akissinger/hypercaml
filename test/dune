@@ -1,0 +1,7 @@
+(test
+ (name test_graph)
+ (libraries hypergraph alcotest))
+
+(test
+ (name test_match)
+ (libraries hypergraph alcotest))
